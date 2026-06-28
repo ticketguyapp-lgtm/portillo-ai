@@ -1,0 +1,116 @@
+[
+  {
+    "category": "Turkey Neck Plates",
+    "name": "2 Turkey Necks with White Rice",
+    "price": 16.99
+  },
+  {
+    "category": "Turkey Neck Plates",
+    "name": "Craven Boiled Turkey Neck Plate",
+    "description": "2 Cajun Boiled Turkey Necks, white rice, corn, potato, sausage, Craven butter sauce",
+    "price": 21.99
+  },
+  {
+    "category": "Wings",
+    "name": "6 Breaded Whole Chicken Wings with seasoned rice or fries",
+    "description": "Add $2 for wet",
+    "price": 12.99
+  },
+  {
+    "category": "Snow Crab",
+    "name": "Fried Snow Crab Cluster with Ramen, Corn, Sausage, Potatoes",
+    "price": 36.0
+  },
+  {
+    "category": "Snow Crab",
+    "name": "Fried Snow Crab Cluster with Fried Shrimp, White Rice, Corn, Potatoes, Sausage",
+    "price": 29.0
+  },
+  {
+    "category": "Snow Crab",
+    "name": "Fried Snow Crab Cluster, Fried Shrimp, White Rice",
+    "price": 27.0
+  },
+  {
+    "category": "Snow Crab",
+    "name": "JJ Special",
+    "description": "Boiled Snow Crab, Boiled Shrimp, corn, potatoes",
+    "price": 28.0
+  },
+  {
+    "category": "Snow Crab",
+    "name": "Penelope Special",
+    "description": "1 lb Snow Crab, 1 corn, 1 potato, 1 sausage",
+    "price": 35.0
+  },
+  {
+    "category": "Shrimp",
+    "name": "Khloe Special",
+    "description": "2 lbs shrimp, 4 corns, 4 potatoes, 1 sausage",
+    "price": 40.99
+  },
+  {
+    "category": "Shrimp",
+    "name": "Double E Special",
+    "description": "1 lb ready-to-eat shrimp, 1 corn, 2 potatoes",
+    "price": 20.0
+  },
+  {
+    "category": "Wings",
+    "name": "6pc Whole Wings with rice or fries",
+    "description": "Add $1 for wet",
+    "price": 9.99
+  },
+  {
+    "category": "Loaded Fries",
+    "name": "Buffalo Chicken Fries",
+    "price": 13.0
+  },
+  {
+    "category": "Pasta",
+    "name": "Shrimp Pasta",
+    "price": 22.0
+  },
+  {
+    "category": "Fish",
+    "name": "Fried Fish & Fries",
+    "price": 12.99
+  },
+  {
+    "category": "Fish",
+    "name": "Fried Fish, 3 Shrimp and Fries",
+    "price": 13.99
+  },
+  {
+    "category": "Shrimp",
+    "name": "7pc Fried Shrimp",
+    "price": 12.99
+  },
+  {
+    "category": "Shrimp",
+    "name": "Boiled Shrimp and Rice",
+    "price": 11.0
+  },
+  {
+    "category": "Shrimp",
+    "name": "Boiled Shrimp, Rice & Sausage",
+    "price": 15.0
+  },
+  {
+    "category": "Shrimp",
+    "name": "Fried Shrimp and Rice",
+    "price": 13.0
+  },
+  {
+    "category": "Boudin",
+    "name": "Boudin Balls",
+    "description": "$4 each or 3 for $10",
+    "price": 4.0
+  },
+  {
+    "category": "Boudin",
+    "name": "Hot Cheeto Boudin Balls",
+    "description": "$6 each or 3 for $15",
+    "price": 6.0
+  }
+]
