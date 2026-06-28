@@ -1,19 +1,23 @@
+
 # Portillo AI
 
-Portillo AI is the AI operating system for John Portillo’s businesses.
+Portillo AI is the desktop-first AI operating system for John Portillo’s businesses.
 
-## Version 1 Focus
+## Version 0.2
 
-1. Morning Command Center
-2. AI Marketing Center
-3. Craven Off-Season Dashboard
-4. W&D Bid Lifecycle Manager
-5. AI Document Vault
+This version adds the first desktop application interface:
+
+- Executive Command Center
+- Today's Required Tasks
+- AI Marketing Center
+- Craven Off-Season Dashboard
+- W&D Bid Center
+- AI Executive Assistant panel
+
+## Build Priority
+
+Desktop first. Mobile companion later.
 
 ## Mission
 
-Reduce daily decisions, automate repetitive work, and give John back time.
-
-## First Build Priority
-
-The AI Marketing Center should create Craven Crawfish posts, flyers, Zeely prompts, Kling prompts, SMS messages, and push notifications from one simple input.
+Reduce decisions. Increase execution. Give John back time.
