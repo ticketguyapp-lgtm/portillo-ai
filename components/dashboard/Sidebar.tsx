@@ -1,24 +1,35 @@
 import {
   BarChart3,
-  Bot,
+  Briefcase,
   CalendarDays,
   FileText,
   LayoutGrid,
+  Mail,
   MessageSquareText,
+  Receipt,
   Settings,
   ShieldCheck,
   Sparkles,
+  Wallet,
 } from "lucide-react";
 
-export default function Sidebar() {
+type SidebarProps = {
+  activeWorkspace: string;
+  onNavigate: (workspace: string) => void;
+};
+
+export default function Sidebar({ activeWorkspace, onNavigate }: SidebarProps) {
   const menuItems = [
-    { label: "Dashboard", icon: LayoutGrid, active: true },
+    { label: "Dashboard", icon: LayoutGrid },
     { label: "W&D Portico", icon: BarChart3 },
     { label: "Craven Crawfish", icon: ShieldCheck },
     { label: "TicketGuy", icon: MessageSquareText },
     { label: "Syvl Audit", icon: FileText },
-    { label: "AI Assistant", icon: Bot },
+    { label: "M&M Environmental", icon: Briefcase },
+    { label: "Gmail", icon: Mail },
     { label: "Calendar", icon: CalendarDays },
+    { label: "Documents", icon: FileText },
+    { label: "Finance", icon: Wallet },
     { label: "Settings", icon: Settings },
   ];
 
@@ -37,11 +48,13 @@ export default function Sidebar() {
       <nav className="space-y-2">
         {menuItems.map((item) => {
           const Icon = item.icon;
+          const isActive = activeWorkspace === item.label;
           return (
             <button
               key={item.label}
+              onClick={() => onNavigate(item.label)}
               className={`flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left text-sm font-medium transition ${
-                item.active
+                isActive
                   ? "bg-white/10 text-white shadow-inner"
                   : "text-slate-400 hover:bg-white/5 hover:text-white"
               }`}

@@ -1,48 +1,69 @@
-import { ArrowRight, CalendarDays, Mail, Sparkles } from "lucide-react";
+import { Send, Sparkles, Mail, AlertCircle, Truck } from "lucide-react";
+
+const priorities = [
+  { icon: Sparkles, title: "Hamilton Builders bid due tomorrow" },
+  { icon: Mail, title: "3 important estimator emails" },
+  { icon: Truck, title: "TicketGuy reports 42 active trucks" },
+  { icon: AlertCircle, title: "Craven inventory running low" },
+];
 
 export default function ExecutiveAssistant() {
-  const sections = [
-    { title: "Today's Priorities", items: ["Finalize Q3 forecast", "Review proposal pipeline"] },
-    { title: "Important Emails", items: ["Client follow-up needed", "Vendor contract update"] },
-    { title: "Calendar", items: ["Leadership sync at 9:30", "Board prep at 2:00"] },
-    { title: "AI Recommendations", items: ["Automate recurring reports", "Flag bid risks"] },
-  ];
-
   return (
-    <section className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 text-white shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-        <div>
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 text-sm text-slate-200">
-            <Sparkles size={16} />
-            AI Executive Assistant
+    <section className="rounded-[28px] border border-slate-200/80 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+      <div className="flex flex-col gap-6">
+        <div className="space-y-3">
+          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-medium text-slate-700">
+            <Sparkles className="h-4 w-4 text-violet-600" />
+            Executive AI Assistant
           </div>
-          <h2 className="text-2xl font-semibold">Good Morning John Jay.</h2>
-          <p className="mt-2 max-w-xl text-sm text-slate-300">
-            Your portfolio is on track. Here is a concise view of what deserves your attention today.
-          </p>
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Executive AI Assistant</h2>
+            <p className="mt-2 text-sm font-medium text-slate-700">Good Afternoon, John Jay.</p>
+            <p className="mt-1 text-sm text-slate-500">Here is what needs your attention today.</p>
+          </div>
         </div>
-        <button className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-white transition hover:bg-white/20">
-          Review insights
-          <ArrowRight size={16} />
-        </button>
-      </div>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        {sections.map((section) => (
-          <div key={section.title} className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm">
-            <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-white">
-              {section.title === "Important Emails" ? <Mail size={16} /> : section.title === "Calendar" ? <CalendarDays size={16} /> : <Sparkles size={16} />}
-              <span>{section.title}</span>
+        <div className="grid gap-3 md:grid-cols-2">
+          {priorities.map(({ icon: Icon, title }) => (
+            <div key={title} className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
+              <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-700 shadow-sm">
+                <Icon className="h-4 w-4" />
+              </div>
+              <p className="text-sm font-medium text-slate-700">{title}</p>
             </div>
-            <ul className="space-y-2 text-sm text-slate-300">
-              {section.items.map((item) => (
-                <li key={item} className="rounded-lg bg-slate-950/20 px-3 py-2">
-                  {item}
-                </li>
-              ))}
-            </ul>
+          ))}
+        </div>
+
+        <div className="rounded-2xl border border-violet-100 bg-violet-50 p-4">
+          <div className="flex items-start gap-2">
+            <Sparkles className="mt-0.5 h-4 w-4 text-violet-600" />
+            <div>
+              <p className="text-sm font-semibold text-slate-900">Recommendations</p>
+              <ul className="mt-2 space-y-2 text-sm text-slate-600">
+                <li>• Review Hamilton Builders Addendum 3 before submitting pricing.</li>
+                <li>• Reply to Daniel Moritz before 2 PM.</li>
+              </ul>
+            </div>
           </div>
-        ))}
+        </div>
+
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <label className="flex-1">
+            <span className="sr-only">Ask Portillo AI anything</span>
+            <input
+              type="text"
+              placeholder="Ask Portillo AI anything..."
+              className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700 outline-none transition focus:border-violet-400 focus:bg-white focus:ring-2 focus:ring-violet-100"
+            />
+          </label>
+          <button
+            type="button"
+            className="inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+          >
+            <Send className="h-4 w-4" />
+            Send
+          </button>
+        </div>
       </div>
     </section>
   );
