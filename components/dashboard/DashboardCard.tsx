@@ -1,43 +1,23 @@
+import type { ReactNode } from "react";
+
 type DashboardCardProps = {
   title: string;
-  value: string;
-  color?: string;
+  subtitle?: string;
+  children: ReactNode;
 };
 
 export default function DashboardCard({
   title,
-  value,
-  color = "2563eb",
+  subtitle,
+  children,
 }: DashboardCardProps) {
   return (
-    <div
-      style={{
-        background: "white",
-        borderRadius: "12px",
-        padding: "20px",
-        boxShadow: "0 2px 8px gba(0,0,0,.08)",
-        borderLeft: `6px solid ${color}`,
-        minWidth: "220px",
-      }}
-    >
-      <div
-        style={{
-          color: "7280",
-          fontSize: "14px",
-        }}
-      >
-        {title}
+    <section className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+      <div className="mb-4">
+        <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+        {subtitle ? <p className="mt-1 text-sm text-slate-500">{subtitle}</p> : null}
       </div>
-
-      <div
-        style={{
-          fontSize: "32px",
-          fontWeight: "bold",
-          marginTop: "10px",
-        }}
-      >
-        {value}
-      </div>
-    </div>
+      {children}
+    </section>
   );
 }
